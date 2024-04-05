@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Hogar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row size-lg="6" size-md="6" size-sm="12">
+      <ion-col size-lg="6" size-md="6" size-sm="12" class="ion-no-padding" *ngFor="let habitacion of habitaciones">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{habitacion.nombre}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <div class="ventanamargen">
+              <div class="ventana">
+                <div class="foco" [class.encendido]="habitacion.luminaria">
+                  <div class="luz"></div>
+                </div>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
